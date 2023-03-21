@@ -5,6 +5,7 @@ namespace Educative.Core.Entity
     public class Course
     {
         [Key]
+        [Required]
         public string CourseID { get; set; } = string.Empty!; 
         [Display(Name = "Course Name")]
         public string CourseName { get; set; } = string.Empty!;

@@ -1,0 +1,56 @@
+[
+  {
+    "AddressID": "DrusAdd",
+    "Addr1": "123 Main St",
+    "Add2": "Broad St",
+    "City": "New York",
+    "County": "NY",
+    "Postcode": "123NN",
+    "StudentAddressID": "Drus"
+  },
+  {
+    "AddressID": "HarrisAdd",
+    "Addr1": "12 Goglin Rd",
+    "Add2": "Andrew Mews",
+    "City": "New York",
+    "County": "NY",
+    "Postcode": "413NN",
+    "StudentAddressID": "Harris"
+  },
+  {
+    "AddressID": "HarveyAdd",
+    "Addr1": "12 Vivle Rd",
+    "Add2": "Belverdare",
+    "City": "Kent",
+    "County": "Kent",
+    "Postcode": "DA121HY",
+    "StudentAddressID": "Harvey"
+  },
+  {
+    "AddressID": "ThompsonAdd",
+    "Addr1": "12 Micklay Ave",
+    "Add2": "West Reading",
+    "City": "Reading",
+    "County": "Berkshire",
+    "Postcode": "RG12BF",
+    "StudentAddressID": "Thompson"
+  },
+  {
+    "AddressID": "SimpsonAdd",
+    "Addr1": "125 Micklay Ave",
+    "Add2": "West Reading",
+    "City": "Reading",
+    "County": "Berkshire",
+    "Postcode": "RG12BF",
+    "StudentAddressID": "Simpson"
+  },
+  {
+    "AddressID": "GoslinAdd",
+    "Addr1": "135 Goglin Rd",
+    "Add2": "Andrew Mews",
+    "City": "New York",
+    "County": "NY",
+    "Postcode": "413NN",
+    "StudentAddressID": "Goslin"
+  }
+]

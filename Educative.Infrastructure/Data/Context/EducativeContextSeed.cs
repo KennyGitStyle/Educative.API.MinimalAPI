@@ -10,24 +10,10 @@ namespace Educative.Infrastructure.Data.Context
         {
             try
             {
-                if(!context.Students.Any())
+                if (!context.Courses.Any())
                 {
-                    var students = await File.ReadAllTextAsync("../Educative.Infrastructure/Data/Context/DataSeed/Students.json");
+                    var courses = await File.ReadAllTextAsync("../Educative.Infrastructure/Data/context/DataSeed/Courses.json");
 
-                    var studentList = JsonSerializer.Deserialize<List<Student>>(students);
-                    if (studentList != null)
-                    {
-                        studentList.ForEach(async s => await context.Students.AddAsync(s!));
-                        await context.SaveChangesAsync();
-                    }
-
-                    await context.SaveChangesAsync();
-                }
-
-                if(!context.Courses.Any())
-                {
-                    var courses = await File.ReadAllTextAsync("../Educative.Infrastructure/Data/Context/DataSeed/Courses.json");
-                    
                     var coursesList = JsonSerializer.Deserialize<List<Course>>(courses);
 
                     if (coursesList != null)
@@ -36,7 +22,46 @@ namespace Educative.Infrastructure.Data.Context
                         await context.SaveChangesAsync();
                     }
 
-                    await context.SaveChangesAsync();
+                }
+
+                if (!context.Students.Any())
+                {
+                    var students = await File.ReadAllTextAsync("../Educative.Infrastructure/Data/Context/DataSeed/Students.json");
+
+                    var studentsList = JsonSerializer.Deserialize<List<Student>>(students);
+
+                    if (studentsList != null)
+                    {
+                        studentsList.ForEach(async s => await context.Students.AddAsync(s));
+                        await context.SaveChangesAsync();
+                    }
+
+                }
+
+                if (!context.Addresses.Any())
+                {
+                    var addresses = await File.ReadAllTextAsync("../Educative.Infrastructure/Data/Context/DataSeed/Addresses.json");
+
+                    var addressList = JsonSerializer.Deserialize<List<Address>>(addresses);
+
+                    if (addressList != null)
+                    {
+                        addressList.ForEach(async a => await context.Addresses.AddAsync(a));
+                        await context.SaveChangesAsync();
+                    }
+
+                }
+
+                if (!context.StudentCourses.Any())
+                {
+                    var studentCourses = await File.ReadAllTextAsync("../Educative.Infrastructure/Data/Context/DataSeed/StudentCourses.json");
+
+                    var studentCourseList = JsonSerializer.Deserialize<List<StudentCourse>>(studentCourses);
+                    if (studentCourseList != null)
+                    {
+                        studentCourseList.ForEach(async sc => await context.StudentCourses.AddAsync(sc));
+                        await context.SaveChangesAsync();
+                    }
                 }
 
             }

@@ -18,6 +18,6 @@ namespace Educative.Core.Entity
         public string Postcode { get; set; } = string.Empty!;
         [ForeignKey("Student")]
         public string StudentAddressID { get; set; } = string.Empty!;
-        public virtual Student Student { get; set; } = new();
+        public virtual Student? Student { get; set; }
     }
 }

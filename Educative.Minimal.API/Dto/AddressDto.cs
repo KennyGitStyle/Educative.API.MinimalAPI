@@ -9,5 +9,5 @@ public class AddressDto
     public string County { get; set; } = string.Empty!;
     public string Postcode { get; set; } = string.Empty!;
     public string? StudentAddressID { get; set; }
-    public virtual StudentDto? StudentDto { get; set; }
+    public StudentDto? StudentDto { get; set; }
 }

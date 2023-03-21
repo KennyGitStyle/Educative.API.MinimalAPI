@@ -5,6 +5,7 @@ namespace Educative.Core.Entity
     public class Student
     {
         [Key]
+        [Required]
         public string StudentID { get; set; } = string.Empty!;
         [Display(Name = "Firstname")]
         public string Firstname { get; set; } = string.Empty!;
@@ -13,13 +14,12 @@ namespace Educative.Core.Entity
         [Display(Name = "Lastname")]
         public string Lastname { get; set; } = string.Empty!;
         public DateTime? DateOfBirth { get; set; }
-        public virtual Address Address { get; set; } = new();
+        public virtual Address? Address { get; set; }
         [DataType(DataType.PhoneNumber)]
         public string PhoneNo { get; set; } = string.Empty!;
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; } = string.Empty!;
         public int Attendance { get; set; }
         public virtual ICollection<StudentCourse> StudentCourses { get; set; } = new List<StudentCourse>();
-        
     }
 }

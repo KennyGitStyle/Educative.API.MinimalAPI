@@ -1,0 +1,22 @@
+[
+  {
+    "StudentID": "Drus",
+    "CourseID": "Bus"
+  },
+  {
+    "StudentID": "Drus",
+    "CourseID": "Proj"
+  },
+  {
+    "StudentID": "Harris",
+    "CourseID": "Com"
+  },
+  {
+    "StudentID": "Harvey",
+    "CourseID": "Com"
+  },
+  {
+    "StudentID": "Simpson",
+    "CourseID": "Nurse"
+  }
+]

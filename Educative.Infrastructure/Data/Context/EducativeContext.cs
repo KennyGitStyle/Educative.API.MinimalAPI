@@ -10,11 +10,10 @@ namespace Educative.Infrastructure.Data.Context
         {
             
         }
-
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Course> Courses { get; set; }
-        public DbSet<Address> Addresses { get; set; }
-        public DbSet<StudentCourse> StudentCourses { get; set; }
+        public DbSet<Student> Students { get; set; } = null!;
+        public DbSet<Course> Courses { get; set; } = null!;
+        public DbSet<Address> Addresses { get; set; } = null!;
+        public DbSet<StudentCourse> StudentCourses { get; set; } = null!; 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -23,12 +22,12 @@ namespace Educative.Infrastructure.Data.Context
             .HasKey(sc => new { sc.StudentID, sc.CourseID });
 
             modelBuilder.Entity<StudentCourse>()
-            .HasOne<Student>(sc => sc.Student)
+            .HasOne(sc => sc.Student)
             .WithMany(s => s.StudentCourses)
             .HasForeignKey(sc => sc.StudentID);
 
             modelBuilder.Entity<StudentCourse>()
-            .HasOne<Course>(sc => sc.Course)
+            .HasOne(sc => sc.Course)
             .WithMany(s => s.StudentCourses)
             .HasForeignKey(sc => sc.CourseID);
 
